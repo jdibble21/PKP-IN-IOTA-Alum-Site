@@ -1,21 +1,19 @@
 <?php
 include 'header.php';
 ?>
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="AlumniHome.php">Alumni Home</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Donate/MakeDonation.php">Donate</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://ballstate.phikappapsi.com/leaders">Connect</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <!-- Page header-->
     <header>
         <div class="carousel slide" id="carouselExampleIndicators" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -27,7 +25,7 @@ include 'header.php';
                 <div class="carousel-item active">
                     <img class="d-block w-100" src="../frontend/assets/img/recruitment2017.jpg" alt="..." />
                     <div class="carousel-caption d-none d-md-block">
-                        <h3>First Slide</h3>
+                        <h3>Alumni Events</h3>
                         <p>This is a description for the first slide.</p>
                     </div>
                 </div>
@@ -65,7 +63,7 @@ include 'header.php';
                 <div class="col-lg-4 mb-4 mb-lg-0">
                     <div class="card h-100">
                         <h4 class="card-header">Catch Up On the Latest News!</h4>
-                        <div class="card-body"><p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p></div>
+                        <div class="card-body"><p class="card-text"></p></div>
                         <div class="card-footer"><a class="btn btn-primary" href="#!">View News</a></div>
                     </div>
                 </div>
@@ -73,14 +71,14 @@ include 'header.php';
                     <div class="card h-100">
                         <h4 class="card-header">Donate Directly to the Chapter!</h4>
                         <div class="card-body"><p class="card-text">Click the link below to donate any amount you wish! Funds go straight to your brothers!</p></div>
-                        <div class="card-footer"><a class="btn btn-primary" href="#!">Donate</a></div>
+                        <div class="card-footer"><a class="btn btn-primary" href="Donate/MakeDonation.php">Donate</a></div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="card h-100">
                         <h4 class="card-header">Get in touch with the Current Leadership!</h4>
-                        <div class="card-body"><p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p></div>
-                        <div class="card-footer"><a class="btn btn-primary" href="#!">Contact Us</a></div>
+                        <div class="card-body"><p class="card-text">Contact a member of the current executive board and see what's going on!</p></div>
+                        <div class="card-footer"><a class="btn btn-primary" href="https://ballstate.phikappapsi.com/leaders">Contact Us</a></div>
                     </div>
                 </div>
             </div>
@@ -133,7 +131,6 @@ include 'header.php';
             </div>
         </div>
     </aside>
-
 <?php
 include 'footer.php';
 ?>

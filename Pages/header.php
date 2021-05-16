@@ -7,7 +7,7 @@
     <meta name="author" content="" />
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
-    <link href="../frontend/css/styles.css" rel="stylesheet" />
+    <link href="../../frontend/css/styles.css" rel="stylesheet" />
     <title>Phi Psi Ball State Alumni</title>
 </head>
 <body>
