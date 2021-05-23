@@ -10,7 +10,24 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+#cardOverride{
+  background-color: #252525;
+  color: #f8f9fa;
+}
+#cardOverride div{
+  background-color: #525252;
+}
+#footerOverride{
+  background-color: #2a2a2a;
+}
+#cssOverride{
+
+}
+#navbarOverride{
+  background-color: #f8f9fa;
+}
 :root {
+  --huntergreen:#355E3B;
   --blue: black;
   --indigo: #6610f2;
   --purple: #6f42c1;

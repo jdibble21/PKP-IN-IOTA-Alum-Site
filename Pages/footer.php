@@ -1,4 +1,4 @@
-<footer class="py-5 bg-dark">
+<footer id="footerOverride" class="py-5">
     <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Phi Kappa Psi 2021</p></div>
 </footer>
 <!-- Bootstrap core JS-->

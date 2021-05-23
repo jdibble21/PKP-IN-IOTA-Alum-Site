@@ -1,7 +1,7 @@
 <?php
 include 'header.php';
 ?>
-    <nav class="navbar navbar-expand-lg">
+    <nav id="navbarOverride" class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="AlumniHome.php">Alumni Home</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -61,21 +61,21 @@ include 'header.php';
             <!-- Marketing Icons Section-->
             <div class="row">
                 <div class="col-lg-4 mb-4 mb-lg-0">
-                    <div class="card h-100">
+                    <div id="cardOverride" class="card h-100">
                         <h4 class="card-header">Catch Up On the Latest News!</h4>
-                        <div class="card-body"><p class="card-text"></p></div>
+                        <div class="card-body"><p class="card-text">Read the latest newsletters to see whats going on in the chapter!</p></div>
                         <div class="card-footer"><a class="btn btn-primary" href="#!">View News</a></div>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4 mb-lg-0">
-                    <div class="card h-100">
+                    <div id="cardOverride" class="card h-100">
                         <h4 class="card-header">Donate Directly to the Chapter!</h4>
                         <div class="card-body"><p class="card-text">Click the link below to donate any amount you wish! Funds go straight to your brothers!</p></div>
                         <div class="card-footer"><a class="btn btn-primary" href="Donate/MakeDonation.php">Donate</a></div>
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="card h-100">
+                    <div id="cardOverride" class="card h-100">
                         <h4 class="card-header">Get in touch with the Current Leadership!</h4>
                         <div class="card-body"><p class="card-text">Contact a member of the current executive board and see what's going on!</p></div>
                         <div class="card-footer"><a class="btn btn-primary" href="https://ballstate.phikappapsi.com/leaders">Contact Us</a></div>
