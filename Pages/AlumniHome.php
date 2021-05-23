@@ -13,23 +13,23 @@ include 'header.php';
                     <a class="nav-link" href="#">Alumni Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">News</a>
+                    <a class="nav-link" href="News/newsletterView.php">News</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Donate</a>
+                    <a class="nav-link" href="Donate/MakeDonation.php">Donate</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="https://ballstate.phikappapsi.com/leaders">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="showLoginForm()">Admin</a>
+                    <a class="nav-link" onclick="showLoginForm()">Admin</a>
                     <div id="loginForm" style="display: none;">
                         <form>
                             <label for="username">Username:</label>
                             <input id="username" name="username" type="text" size="10">
                             <label for="password">Password:</label>
                             <input id="password" name="password" type="password" size="10">
-                            <input type="submit" value="Login">
+                            <input type="button" value="Login" onclick="attemptLogin(document.getElementById('username').value,document.getElementById('password').value)">
                         </form>
                     </div>
                 </li>
@@ -90,7 +90,7 @@ include 'header.php';
                     <div id="cardOverride" class="card h-100">
                         <h4 class="card-header">Catch Up On the Latest News!</h4>
                         <div class="card-body"><p class="card-text">Read the latest newsletters to see whats going on in the chapter!</p></div>
-                        <div class="card-footer"><a class="btn btn-primary" href="#!">View News</a></div>
+                        <div class="card-footer"><a class="btn btn-primary" href="News/newsletterView.php">View News</a></div>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4 mb-lg-0">
@@ -111,13 +111,12 @@ include 'header.php';
         </div>
     </section>
     <hr class="my-0" />
-    <!-- Portfolio Section-->
     <section class="py-5 bg-light">
         <div class="container">
             <h2 class="mb-4">Latest Updates</h2>
             <div class="row">
                 <div class="col-lg-4 col-sm-6 mb-4">
-                    <div class="card h-100">
+                    <div class="card h-100" id="newsOverride">
                         <a href="#!"><img class="card-img-top" src="https://via.placeholder.com/700x400" alt="..." /></a>
                         <div class="card-body">
                             <h4 class="card-title"><a href="#!">Project One</a></h4>
@@ -126,16 +125,16 @@ include 'header.php';
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6 mb-4">
-                    <div class="card h-100">
+                    <div class="card h-100" id="newsOverride">
                         <a href="#!"><img class="card-img-top" src="https://via.placeholder.com/700x400" alt="..." /></a>
-                        <div class="card-body">
+                        <div class="card-body" >
                             <h4 class="card-title"><a href="#!">Project Two</a></h4>
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6 mb-4">
-                    <div class="card h-100">
+                    <div class="card h-100" id="newsOverride">
                         <a href="#!"><img class="card-img-top" src="https://via.placeholder.com/700x400" alt="..." /></a>
                         <div class="card-body">
                             <h4 class="card-title"><a href="#!">Project Three</a></h4>
@@ -148,7 +147,6 @@ include 'header.php';
     </section>
     <hr class="my-0" />
     <hr class="my-0" />
-    <!-- Call to Action-->
     <aside id="linkOverride" class="py-5">
         <div class="container">
             <div class="row">
