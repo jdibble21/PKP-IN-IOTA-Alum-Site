@@ -1,17 +1,43 @@
 <?php
 include 'header.php';
 ?>
-    <nav id="navbarOverride" class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="AlumniHome.php">Alumni Home</a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">News</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Donate/MakeDonation.php">Donate</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://ballstate.phikappapsi.com/leaders">Connect</a></li>
-                </ul>
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img class="navbar-brand" src="../frontend/assets/img/phipsilogo.png">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Alumni Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Donate</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showLoginForm()">Admin</a>
+                    <div id="loginForm" style="display: none;">
+                        <form>
+                            <label for="username">Username:</label>
+                            <input id="username" name="username" type="text" size="10">
+                            <label for="password">Password:</label>
+                            <input id="password" name="password" type="password" size="10">
+                            <input type="submit" value="Login">
+                        </form>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
         </div>
     </nav>
     <header>
@@ -25,8 +51,8 @@ include 'header.php';
                 <div class="carousel-item active">
                     <img class="d-block w-100" src="../frontend/assets/img/recruitment2017.jpg" alt="..." />
                     <div class="carousel-caption d-none d-md-block">
-                        <h3>Alumni Events</h3>
-                        <p>This is a description for the first slide.</p>
+                        <h3>Events</h3>
+                        <p>See if any alumni events are coming up</p>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -123,7 +149,7 @@ include 'header.php';
     <hr class="my-0" />
     <hr class="my-0" />
     <!-- Call to Action-->
-    <aside class="py-5 bg-light">
+    <aside id="linkOverride" class="py-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-8"><p>To keep in touch with the chapter and never miss a thing, follow the National Fraternity on Facebook!</p></div>
