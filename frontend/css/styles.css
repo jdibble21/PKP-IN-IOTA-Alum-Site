@@ -25,8 +25,9 @@ Custom styles to override bootstrap go here
 
 #facebookButton{
     background-color: black;
+    transition: 0.2s;
 }
 
 #facebookButton:hover{
-    font-size: large;
+    background-color: #355E3B;
 }
