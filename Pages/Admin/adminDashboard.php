@@ -1,5 +1,8 @@
 <?php
-
-$userID = $_SESSION['userID'];
-
-echo "<h1>Admin Dashboard</h1>";
+include '../header.php';
+//$userID = $_SESSION['userID'];
+?>
+<h1>Admin Dashboard</h1>
+<?php
+include '../footer.php';
+?>

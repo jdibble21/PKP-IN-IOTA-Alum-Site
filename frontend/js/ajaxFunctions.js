@@ -8,6 +8,22 @@ function loginUser(username,password){
             username: username,
             password: password
         },
-        url: "../backend/php/handlers/attemptLogin.php"
+        url: "../backend/php/handlers/attemptLogin.php",
+        success: async function () {
+            $.ajax({
+                url:"../backend/php/handlers/echoResponse/loginResponse.php",
+                cache:false,
+                success:function(data){
+                    alert(data);
+                    if(data === "G"){
+                        goToAdminDash();
+                    }
+                }
+            });
+        }
     });
+}
+
+function goToAdminDash(){
+    window.location.href = "/Pages/Admin/adminDashboard.php";
 }
