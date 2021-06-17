@@ -30,8 +30,13 @@ class DataLayer
     //select
     function getUserId($userData){
         $query = $this->conn->prepare("select userID from users where username=? and password=?");
-        $query->execute();
-        return $query->fetchAll();
+        $query->execute($userData);
+        return $query->fetch();
+    }
+    function getUserIdByUserName($userName){
+        $query = $this->conn->prepare("select userID from users where username=?");
+        $query->execute([$userName]);
+        return $query->fetch();
     }
 
     //update
