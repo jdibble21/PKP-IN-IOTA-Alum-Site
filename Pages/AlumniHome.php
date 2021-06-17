@@ -151,7 +151,7 @@ include 'header.php';
         <div class="container">
             <div class="row">
                 <div class="col-md-8"><p>To keep in touch with the chapter and never miss a thing, follow the National Fraternity on Facebook!</p></div>
-                <div class="col-md-4"><a class="btn btn-lg btn-secondary btn-block" href="https://www.facebook.com/PhiKappaPsi/" target="_blank">Join the Facebook Group!</a></div>
+                <div class="col-md-4"><a id="facebookButton" class="btn btn-lg btn-secondary btn-block" href="https://www.facebook.com/PhiKappaPsi/" target="_blank">Join the Facebook Group!</a></div>
             </div>
         </div>
     </aside>
