@@ -29,7 +29,7 @@ include 'header.php';
                             <input id="username" name="username" type="text" size="10">
                             <label for="password">Password:</label>
                             <input id="password" name="password" type="password" size="10">
-                            <input type="button" value="Login" onclick="attemptLogin(document.getElementById('username').value,document.getElementById('password').value)">
+                            <input type="button" value="Login" onclick="loginUser(document.getElementById('username').value,document.getElementById('password').value)">
                         </form>
                     </div>
                 </li>
