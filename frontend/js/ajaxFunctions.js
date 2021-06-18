@@ -17,6 +17,8 @@ function loginUser(username,password){
                     alert(data);
                     if(data === "G"){
                         goToAdminDash();
+                    }else if(data === "F"){
+                        alert("Incorrect login");
                     }
                 }
             });

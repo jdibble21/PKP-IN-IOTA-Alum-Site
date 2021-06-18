@@ -2,8 +2,6 @@
 include '../classes/BusinessLogic.php';
 session_start();
 
-$_SESSION['adminLogin'] = "G";
-
 //POST user and password here and verify with db, redirect to dashboard if valid
 
 $username = $_POST['username'];
@@ -13,8 +11,8 @@ $bl = new BusinessLogic();
 
 $attemptLogin = $bl->login($username,$password);
 
-if($attemptLogin){
-    header("Location: /Pages/Admin/adminDashboard.php");
+if($attemptLogin == 1){
+    $_SESSION['adminLogin'] = "G";
 }else{
-    $_SESSION['loginFailed'] = "FAIL";
+    $_SESSION['adminLogin'] = "F";
 }

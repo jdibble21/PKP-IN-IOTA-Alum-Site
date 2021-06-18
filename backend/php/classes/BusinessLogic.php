@@ -10,14 +10,30 @@ class BusinessLogic
     }
 
     public function login($username,$password){
-        $password_hash = password_hash($password,PASSWORD_DEFAULT);
-        $userID = $this->dl->getUserId([$username,$password_hash]);
-        if($userID['userID'] != ""){
-            $_SESSION['userID'] = $userID['userID'];
+        $user = $this->dl->getUser([$username]);
+        $stored_password = $user['password'];
+        if(password_verify($password,$stored_password) and $user != False){
+            $_SESSION['userID'] = $user['userID'];
             return True;
+            //User is good, login
         }else{
             return False;
+            //passwords do not match or username does not exist, don't login
         }
+    }
+
+    public function getUserByUsername($username){
+        return $this->dl->getUserByUserName($username);
+    }
+    public function recordDonation($alumID,$amount,$date){
+        $this->dl->insertDonation([$alumID,$amount,$date]);
+    }
+    public function getDonationByID($Id){
+        return $this->dl->getDonationById($Id);
+    }
+    public function insertAdminUser($username,$password,$fullName,$email){
+        $hash_password = password_hash($password, PASSWORD_DEFAULT);
+        $this->dl->insertAdminUser([$username,$hash_password,$fullName,$email]);
     }
 
 

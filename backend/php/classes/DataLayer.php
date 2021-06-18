@@ -4,6 +4,7 @@ class DataLayer
 {
     private $conn;
 
+
     public function __construct(){
         $hostname = 'localhost';
         $port = 3306;
@@ -20,22 +21,38 @@ class DataLayer
         ];
         try {
             $this->conn = new PDO($dsn, $dbUsername, $dbPass, $options);
+            $this->conn->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
 
     //insert
+    function insertDonation(array $donationData){
+        $query = $this->conn->prepare("insert into donations (target, amount, date) values (?,?,?)");
+        $query->execute($donationData);
+    }
+    function insertAdminUser(array $userData){
+        $query = $this->conn->prepare("insert into users (username, password, fullName, email) values (?,?,?,?)");
+        $query->execute($userData);
+    }
 
     //select
-    function getUserId($userData){
-        $query = $this->conn->prepare("select userID from users where username=? and password=?");
+    function getUser(array $userData){
+        $query = $this->conn->prepare("select * from users where username=?");
         $query->execute($userData);
         return $query->fetch();
+
     }
-    function getUserIdByUserName($userName){
-        $query = $this->conn->prepare("select userID from users where username=?");
+    function getUserByUserName($userName){
+        $query = $this->conn->prepare("select * from users where username=?");
         $query->execute([$userName]);
+        return $query->fetch();
+    }
+    function getDonationById($id){
+        $query = $this->conn->prepare("select * from donations where target=?");
+        $query->execute([$id]);
         return $query->fetch();
     }
 
