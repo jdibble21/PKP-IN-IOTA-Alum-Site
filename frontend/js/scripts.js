@@ -8,3 +8,11 @@ function showLoginForm(){
 
     }
 }
+
+function errorMessage(message){
+    alertify.error(message);
+}
+
+function successMessage(message){
+    alertify.success(message);
+}

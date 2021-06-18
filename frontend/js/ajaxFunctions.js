@@ -15,9 +15,10 @@ function loginUser(username,password){
                 cache:false,
                 success:function(data){
                     if(data === "G"){
+                        successMessage("Welcome Back!")
                         goToAdminDash();
                     }else if(data === "F"){
-                        alert("Incorrect login");
+                        errorMessage("Invalid Login");
                     }
                 }
             });
