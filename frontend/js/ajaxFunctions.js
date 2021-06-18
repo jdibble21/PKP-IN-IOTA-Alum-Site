@@ -25,6 +25,19 @@ function loginUser(username,password){
     });
 }
 
+function logoutUser(){
+    $.ajax({
+        type: "POST",
+        async: false,
+        data: {
+
+        },
+        url: "../backend/php/handlers/logoutAdmin.php",
+
+    });
+    window.location.href = "/Pages/AlumniHome.php";
+}
+
 function goToAdminDash(){
     window.location.href = "/Pages/Admin/adminDashboard.php";
 }

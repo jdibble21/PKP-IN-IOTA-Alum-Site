@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-0">
     <img class="navbar-brand" src="/frontend/assets/img/phipsilogo.png">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -20,15 +20,29 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" onclick="showLoginForm()">Admin</a>
-                <div id="loginForm" style="display: none;">
-                    <form>
-                        <label for="username">Username:</label>
-                        <input id="username" name="username" type="text" size="10">
-                        <label for="password">Password:</label>
-                        <input id="password" name="password" type="password" size="10">
-                        <input type="button" value="Login" onclick="loginUser(document.getElementById('username').value,document.getElementById('password').value)">
-                    </form>
-                </div>
+                <?php
+                if(isset($_SESSION['userID'])){
+                    echo " <div id='loginForm' style='display: none'>
+                              <form>
+                                    <input type='button' value='Admin Dashboard' onclick='goToAdminDash();'>
+                                    <input type='button' value='Logout' onclick='logoutUser();'>
+                              </form>
+                           </div>
+                            
+                    ";
+                }else{
+                    echo "<div id='loginForm' style='display: none;'>
+                             <form>
+                                <label for='username'>Username:</label>
+                                <input id='username' name='username' type='text' size='10'>
+                                <label for='password'>Password:</label>
+                                <input id='password' name='password' type='password' size='10'>
+                                <input type='button' value='Login' onclick='loginUser(document.getElementById(\"username\").value,document.getElementById(\"password\").value)'>
+                            </form>
+                         </div>";
+                }
+                ?>
+
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">

@@ -2,8 +2,9 @@
 session_start();
 include '../header.php';
 $userID = "None";
-
-$userID = $_SESSION['userID'];
+if(isset($_SESSION['userID'])){
+    $userID = $_SESSION['userID'];
+}
 
 if($userID == "None"){
     //redirect if not logged in

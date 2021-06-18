@@ -8,7 +8,3 @@ function showLoginForm(){
 
     }
 }
-
-function attemptLogin(username,password){
-    alert(username+password);
-}
