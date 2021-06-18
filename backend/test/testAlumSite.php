@@ -14,9 +14,6 @@ class testAlumSite extends TestCase
     }
 
     public function testDatabaseSelect(){
-        $result = $this->bl->login("admin","password");
-        if($result == 1){
-            echo "YEA";
-        }
+       $this->bl->insertAdminUser('admin','password','Super Admin','jakeers98@icloud.com');
     }
 }

@@ -1,6 +1,6 @@
 <?php
 include "DataLayer.php";
-
+session_start();
 class BusinessLogic
 {
     private $dl;
@@ -13,7 +13,7 @@ class BusinessLogic
         $user = $this->dl->getUser([$username]);
         $stored_password = $user['password'];
         if(password_verify($password,$stored_password) and $user != False){
-            //Session vars set here
+            $_SESSION['userID'] = $user['userID'];
             return True;
             //User is good, login
         }else{

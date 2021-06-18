@@ -29,4 +29,4 @@ CREATE TABLE `users` (
   `email` varchar(255) NOT NULL
 );
 
-insert into users(username, password, fullName, email) values ('admin','$2y$10$Xi05Te40PfCl8.EkozYQoeQb8/OXnWNWSPlAm.hiVQ59CgvUz.mwO','Super Admin','jakeers98@icloud.com');
+insert into users(username, password, fullName, email) values ('admin','$2y$10$zHil2RebNZbyKgiH2Zxj.OVHiloKgyu/r177TIGBOSvWvb7qHo/b.','Super Admin','jakeers98@icloud.com');

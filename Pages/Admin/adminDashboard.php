@@ -1,4 +1,5 @@
 <?php
+session_start();
 include '../header.php';
 $userID = "None";
 
@@ -12,7 +13,7 @@ if($userID == "None"){
 
 ?>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <img class="navbar-brand" src="../frontend/assets/img/phipsilogo.png">
+        <img class="navbar-brand" src="../../frontend/assets/img/phipsilogo.png">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -35,11 +36,8 @@ if($userID == "None"){
                     <a class="nav-link" onclick="showLoginForm()">Admin</a>
                     <div id="loginForm" style="display: none;">
                         <form>
-                            <label for="username">Username:</label>
-                            <input id="username" name="username" type="text" size="10">
-                            <label for="password">Password:</label>
-                            <input id="password" name="password" type="password" size="10">
-                            <input type="button" value="Login" onclick="loginUser(document.getElementById('username').value,document.getElementById('password').value)">
+
+                            <input type="button" value="Logout" onclick="">
                         </form>
                     </div>
                 </li>
@@ -50,7 +48,13 @@ if($userID == "None"){
             </form>
         </div>
     </nav>
-        <h1>Admin Dashboard</h1>
+        <div class="container justify-content-center">
+            <div class="row">
+                <div class="span6" style="float: none; margin: 0 auto;">
+                    <h1>Admin Dashboard</h1>
+                </div>
+            </div>
+        </div>
 <?php
 include '../footer.php';
 ?>
