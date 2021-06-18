@@ -12,11 +12,14 @@ if($userID == "None"){
 }
 include '../navbar.php';
 ?>
-        <div class="container justify-content-center">
-            <div class="row">
-                <div class="span6" style="float: none; margin: 0 auto;">
-                    <h1>Admin Dashboard</h1>
-                </div>
+        <div class="border-end bg-white" id="sidebar-wrapper">
+            <div class="sidebar-heading border-bottom bg-light">Indiana Iota Alumni Site Dashboard</div>
+            <div class="list-group list-group-flush">
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Dashboard Home</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Newsletter Upload</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Donations</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Export Records</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">User Accounts</a>
             </div>
         </div>
 <?php
