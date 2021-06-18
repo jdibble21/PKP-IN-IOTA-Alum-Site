@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 ob_start();
 include 'header.php';
-$_SESSION['adminLogin'] = "not good";
+
 ?>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <img class="navbar-brand" src="../frontend/assets/img/phipsilogo.png">

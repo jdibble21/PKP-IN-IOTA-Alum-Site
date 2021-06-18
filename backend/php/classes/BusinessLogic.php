@@ -13,7 +13,7 @@ class BusinessLogic
         $user = $this->dl->getUser([$username]);
         $stored_password = $user['password'];
         if(password_verify($password,$stored_password) and $user != False){
-            $_SESSION['userID'] = $user['userID'];
+            //Session vars set here
             return True;
             //User is good, login
         }else{

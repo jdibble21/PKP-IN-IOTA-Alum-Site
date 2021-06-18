@@ -14,7 +14,6 @@ function loginUser(username,password){
                 url:"../backend/php/handlers/echoResponse/loginResponse.php",
                 cache:false,
                 success:function(data){
-                    alert(data);
                     if(data === "G"){
                         goToAdminDash();
                     }else if(data === "F"){
