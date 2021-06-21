@@ -33,7 +33,7 @@ function logoutUser(){
         data: {
 
         },
-        url: "../backend/php/handlers/logoutAdmin.php",
+        url: "/backend/php/handlers/logoutAdmin.php",
 
     });
     window.location.href = "/Pages/AlumniHome.php";

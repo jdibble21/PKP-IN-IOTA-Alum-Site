@@ -3,11 +3,12 @@ session_start();
 error_reporting(0);
 include '../header.php';
 include '../../backend/php/classes/BusinessLogic.php';
-
+$loggedIn = false;
 $bl = new BusinessLogic();
 $userID = "None";
 if(isset($_SESSION['userID'])){
     $userID = $_SESSION['userID'];
+    $loggedIn = true;
 }
 
 if($userID == "None"){
@@ -21,7 +22,7 @@ include '../navbar.php';
                 <div class="col col-lg-3">
                     <div class="border-end bg-white" id="sidebar-wrapper">
                         <div class="sidebar-heading border-bottom bg-light">IN Iota Alumni Site Dashboard</div>
-                        <div class="list-group list-group-flush">
+                        <div class="list-group list-group-flush" id="menuItems">
                             <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Dashboard Home</a>
                             <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Newsletter Upload</a>
                             <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Donation Log</a>
@@ -30,7 +31,7 @@ include '../navbar.php';
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col" id="dashContent">
                     <div class="container">
                         <?php
                             //Will be refactor this container later, will be dynamic with content pertaining to menu item chosen

@@ -23,7 +23,6 @@ class BusinessLogic
     }
 
     //admin dashboard functions
-
     public function getBasicDonationStats(){
         $totalAmountDonated = 0; //call a function to get all donations, total it up and return to this variable
         $numOfDonations = 0; //call a function to get amount of donation entries, return to this variable.
@@ -34,6 +33,7 @@ class BusinessLogic
     public function displayDonationStats($amount,$number,$frequent){
         echo "
             <div class='card'>
+                <div class='card-title'>Donation Stats</div>
                 <div class='card-body'>Total Amount Donated: $amount<br>Number of Donations: $number<br>Most Frequent Donor: $frequent</div>
             </div>
         ";

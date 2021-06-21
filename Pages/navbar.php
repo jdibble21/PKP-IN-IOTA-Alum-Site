@@ -1,3 +1,12 @@
+<?php
+    $loggedIn = false;
+    if(isset($_SESSION['userID'])){
+        if($_SESSION['userID'] != "None" or $_SESSION['userID'] != ""){
+            $loggedIn = true;
+        }
+    }
+?>
+
 <nav class="navbar navbar-expand-lg navbar-light py-0">
     <img class="navbar-brand" src="/frontend/assets/img/phipsilogo.png">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,7 +30,9 @@
             <li class="nav-item">
                 <a class="nav-link" onclick="showLoginForm()">Admin</a>
                 <?php
-                if(isset($_SESSION['userID'])){
+                
+                if($loggedIn){
+
                     echo " <div id='loginForm' style='display: none'>
                               <form>
                                     <input type='button' value='Admin Dashboard' onclick='goToAdminDash();'>
