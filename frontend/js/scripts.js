@@ -16,3 +16,7 @@ function errorMessage(message){
 function successMessage(message){
     alertify.success(message);
 }
+
+function noticeMessage(message){
+    alertify.warning(message);
+}
