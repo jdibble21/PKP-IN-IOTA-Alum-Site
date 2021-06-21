@@ -27,11 +27,11 @@ class BusinessLogic
         $totalAmountDonated = 0; //call a function to get all donations, total it up and return to this variable
         $numOfDonations = 0; //call a function to get amount of donation entries, return to this variable.
         $frequentDonor = "Jim John"; //call function to count most times single alum has donated, return to this variable
-        $this->displayDonationStats($totalAmountDonated,$numOfDonations,$frequentDonor);
+        return $this->displayDonationStats($totalAmountDonated,$numOfDonations,$frequentDonor);
     }
 
     public function displayDonationStats($amount,$number,$frequent){
-        echo "
+        return "
             <div class='card'>
                 <div class='card-title'>Donation Stats</div>
                 <div class='card-body'>Total Amount Donated: $amount<br>Number of Donations: $number<br>Most Frequent Donor: $frequent</div>

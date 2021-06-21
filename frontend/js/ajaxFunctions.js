@@ -39,6 +39,17 @@ function logoutUser(){
     window.location.href = "/Pages/AlumniHome.php";
 }
 
+function getAdminDashHome(){
+    $.ajax({
+        url:"/backend/php/handlers/echoResponse/getDashHome.php",
+        cache:false,
+        success:function(data){
+            document.getElementById("rendContainer").innerHTML = "<h3>Dashboard Home</h3>" + data;
+        }
+    });
+
+}
+
 function goToAdminDash(){
     window.location.href = "/Pages/Admin/adminDashboard.php";
 }
