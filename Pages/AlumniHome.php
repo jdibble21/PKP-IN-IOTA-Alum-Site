@@ -22,14 +22,14 @@ include 'navbar.php';
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="https://via.placeholder.com/1900x600" alt="..." />
+                    <img class="d-block w-100" src="../frontend/assets/img/initiation2018.jpg" alt="..." />
                     <div class="carousel-caption d-none d-md-block">
                         <h3>Second Slide</h3>
                         <p>This is a description for the second slide.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="https://via.placeholder.com/1900x600" alt="..." />
+                    <img class="d-block w-100" src="../frontend/assets/img/chapterOfYear2020.JPG" alt="..." />
                     <div class="carousel-caption d-none d-md-block">
                         <h3>Third Slide</h3>
                         <p>This is a description for the third slide.</p>
