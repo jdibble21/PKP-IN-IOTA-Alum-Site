@@ -29,7 +29,8 @@ include '../navbar.php';
                 getAdminDashHome();
             });
             $("#newsUpload").on('click',function (){
-                $("#rendContainer").replaceWith("<div id=\"rendContainer\" class=\"container\">news upload</div>");
+                $("#rendContainer").replaceWith("<div id=\"rendContainer\" class=\"container\"></div>");
+                getAdminDashUpload();
             });
             $("#donLog").on('click',function (){
                 $("#rendContainer").replaceWith("<div id=\"rendContainer\" class=\"container\">donation log</div>");

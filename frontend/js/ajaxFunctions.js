@@ -8,10 +8,10 @@ function loginUser(username,password){
             username: username,
             password: password
         },
-        url: "../backend/php/handlers/attemptLogin.php",
+        url: "/backend/php/handlers/attemptLogin.php",
         success: async function () {
             $.ajax({
-                url:"../backend/php/handlers/echoResponse/loginResponse.php",
+                url:"/backend/php/handlers/echoResponse/loginResponse.php",
                 cache:false,
                 success:function(data){
                     if(data === "G"){
@@ -34,7 +34,6 @@ function logoutUser(){
 
         },
         url: "/backend/php/handlers/logoutAdmin.php",
-
     });
     window.location.href = "/Pages/AlumniHome.php";
 }
@@ -47,7 +46,15 @@ function getAdminDashHome(){
             document.getElementById("rendContainer").innerHTML = "<h3>Dashboard Home</h3>" + data;
         }
     });
-
+}
+function getAdminDashUpload(){
+    $.ajax({
+        url:"/backend/php/handlers/echoResponse/getDashUpload.php",
+        cache:false,
+        success:function(data){
+            document.getElementById("rendContainer").innerHTML = "<h3>Newsletter Upload</h3>" + data;
+        }
+    });
 }
 
 function goToAdminDash(){

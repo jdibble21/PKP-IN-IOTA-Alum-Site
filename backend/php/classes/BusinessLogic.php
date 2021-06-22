@@ -24,8 +24,8 @@ class BusinessLogic
 
     //admin dashboard functions
     public function getBasicDonationStats(){
-        $totalAmountDonated = 0; //call a function to get all donations, total it up and return to this variable
-        $numOfDonations = 0; //call a function to get amount of donation entries, return to this variable.
+        $totalAmountDonated = 3556.23; //call a function to get all donations, total it up and return to this variable
+        $numOfDonations = 23; //call a function to get amount of donation entries, return to this variable.
         $frequentDonor = "Jim John"; //call function to count most times single alum has donated, return to this variable
         return $this->displayDonationStats($totalAmountDonated,$numOfDonations,$frequentDonor);
     }
@@ -33,12 +33,25 @@ class BusinessLogic
     public function displayDonationStats($amount,$number,$frequent){
         return "
             <div class='card'>
-                <div class='card-title'>Donation Stats</div>
-                <div class='card-body'>Total Amount Donated: $amount<br>Number of Donations: $number<br>Most Frequent Donor: $frequent</div>
+                <div class='card-title m-4'><strong>Overall Donation Info</strong></div>
+                <div class='card-body m-0'>Total Amount Donated: $$amount<br>Number of Donations: $number<br>Most Frequent Donor: $frequent</div>
             </div>
         ";
     }
-
+    public function displayNewsletterUploadModule(){
+        return "
+                <form action=\"/file-upload\" class=\"dropzone\" id=\"my-awesome-dropzone\"></form>
+                <form>
+                    <div class='form-group'>
+                        <label for='titleInput'>Newsletter Title</label>
+                        <input type='text' class='form-control' placeholder='e.g. Spring 2020'>              
+                    </div>
+                    <div class='form-group'>
+                        <button type='button' class='btn btn-primary'>Upload</button>
+                    </div>
+                </form>
+        ";
+    }
     public function getUserByUsername($username){
         return $this->dl->getUserByUserName($username);
     }

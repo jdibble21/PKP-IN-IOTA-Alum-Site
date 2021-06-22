@@ -10,6 +10,7 @@
 <script src="/frontend/js/ajaxFunctions.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="/frontend/js/alertifyjs/alertify.min.js"></script>
+<script src="/frontend/js/dropzone-5.7.0/dist/dropzone.js"></script>
 <link rel="stylesheet" href="/frontend/js/alertifyjs/css/alertify.min.css" />
 <link rel="stylesheet" href="/frontend/js/alertifyjs/css/themes/default.min.css" />
 </body>
