@@ -40,6 +40,7 @@ class BusinessLogic
     }
     public function displayNewsletterUploadModule(){
         return "
+            <div id='formDiv' class='centered'>
                 <form id='newsUploadForm' class='form-horizontal centered'>
                     <div class='form-group row'>
                         <label for='pdfUpload'>Select Newsletter PDF file to upload</label>
@@ -57,6 +58,7 @@ class BusinessLogic
                         <button type='button' class='btn btn-primary'>Upload</button>
                     </div>
                 </form>
+            </div>
         ";
     }
     public function getUserByUsername($username){

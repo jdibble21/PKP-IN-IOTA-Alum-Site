@@ -34,7 +34,10 @@ Custom styles to override bootstrap go here
     color: #FFFFFF;
     justify-content: center;
 }
-
+form {
+    text-align: center;
+    margin: 0 auto;
+}
 #dashContent{
     background-color: #355E3B;
 }
