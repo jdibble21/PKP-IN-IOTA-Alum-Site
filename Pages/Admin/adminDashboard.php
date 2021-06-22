@@ -29,7 +29,7 @@ include '../navbar.php';
                 getAdminDashHome();
             });
             $("#newsUpload").on('click',function (){
-                $("#rendContainer").replaceWith("<div id=\"rendContainer\" class=\"container\"></div>");
+                $("#rendContainer").replaceWith("<div id=\"rendContainer\" class=\"container center-block\"\"></div>");
                 getAdminDashUpload();
             });
             $("#donLog").on('click',function (){
@@ -57,7 +57,7 @@ include '../navbar.php';
                         </div>
                     </div>
                 </div>
-                <div class="col" id="dashContent">
+                <div class="col center-block"" id="dashContent">
                     <div id="rendContainer" class="container">
 
                     </div>

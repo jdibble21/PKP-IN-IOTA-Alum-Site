@@ -18,21 +18,21 @@ include 'navbar.php';
                     <img class="d-block w-100" src="../frontend/assets/img/recruitment2017.jpg" alt="..." />
                     <div class="carousel-caption d-none d-md-block">
                         <h3>Events</h3>
-                        <p>See if any alumni events are coming up</p>
+                        <p>Check if any alumni events are coming up</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100" src="../frontend/assets/img/initiation2018.jpg" alt="..." />
                     <div class="carousel-caption d-none d-md-block">
-                        <h3>Second Slide</h3>
-                        <p>This is a description for the second slide.</p>
+                        <h3>Reconnect</h3>
+                        <p>Get in contact with your brothers</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100" src="../frontend/assets/img/chapterOfYear2020.JPG" alt="..." />
                     <div class="carousel-caption d-none d-md-block">
-                        <h3>Third Slide</h3>
-                        <p>This is a description for the third slide.</p>
+                        <h3>Updates</h3>
+                        <p>See all the latest news of the chapter</p>
                     </div>
                 </div>
             </div>

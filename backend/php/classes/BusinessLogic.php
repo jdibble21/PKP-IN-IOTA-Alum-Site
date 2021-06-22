@@ -40,13 +40,20 @@ class BusinessLogic
     }
     public function displayNewsletterUploadModule(){
         return "
-                <form action=\"/file-upload\" class=\"dropzone\" id=\"my-awesome-dropzone\"></form>
-                <form>
-                    <div class='form-group'>
-                        <label for='titleInput'>Newsletter Title</label>
-                        <input type='text' class='form-control' placeholder='e.g. Spring 2020'>              
+                <form id='newsUploadForm' class='form-horizontal centered'>
+                    <div class='form-group row'>
+                        <label for='pdfUpload'>Select Newsletter PDF file to upload</label>
+                        <input type='file' class='form-control-file' id='pdfUpload'>
+                        <label for='titleImageUpload'>Select an image to go along with newsletter title</label>
+                        <input type='file' class='form-control-file' id='titleImageUpload'>
                     </div>
-                    <div class='form-group'>
+                    <div class='form-group row centered'>
+                        <label for='titleInput'>Newsletter Title</label>
+                        <div class='col-xs-4'>
+                            <input type='text' class='form-control' placeholder='e.g. Spring 2020'> 
+                        </div>                  
+                    </div>
+                    <div class='form-group row centered'>
                         <button type='button' class='btn btn-primary'>Upload</button>
                     </div>
                 </form>
