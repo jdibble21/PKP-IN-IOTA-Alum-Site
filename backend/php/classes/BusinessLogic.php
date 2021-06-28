@@ -41,25 +41,29 @@ class BusinessLogic
     public function displayNewsletterUploadModule(){
         return "
             <div id='formDiv' class='centered'>
-                <form id='newsUploadForm' class='form-horizontal centered'>
-                    <div class='form-group row'>
+                <form id='newsUploadForm' class='form'>
+                    <div class=''>
                         <label for='pdfUpload'>Select Newsletter PDF file to upload</label>
                         <input type='file' class='form-control-file' id='pdfUpload'>
                         <label for='titleImageUpload'>Select an image to go along with newsletter title</label>
                         <input type='file' class='form-control-file' id='titleImageUpload'>
                     </div>
-                    <div class='form-group row centered'>
+                    <div>
                         <label for='titleInput'>Newsletter Title</label>
                         <div class='col-xs-4'>
                             <input type='text' class='form-control' placeholder='e.g. Spring 2020'> 
                         </div>                  
                     </div>
-                    <div class='form-group row centered'>
+                    <div class='m-3'>
                         <button type='button' class='btn btn-primary'>Upload</button>
                     </div>
                 </form>
             </div>
         ";
+    }
+
+    public function displayPastUploadedNewslettersList(){
+        $newsLetters = ""; //function to grab newsletter data from db
     }
     public function getUserByUsername($username){
         return $this->dl->getUserByUserName($username);
