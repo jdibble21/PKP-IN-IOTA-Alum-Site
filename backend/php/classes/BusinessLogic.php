@@ -3,7 +3,7 @@ include "DataLayer.php";
 session_start();
 class BusinessLogic
 {
-    private $dl;
+    private DataLayer $dl;
 
     public function __construct(){
         $this->dl = new DataLayer();
