@@ -1,14 +1,13 @@
 <?php
 include '../classes/BusinessLogic.php';
-session_start();
 
 $bl = new BusinessLogic();
 
-$target_dir = "/frontend/temp_pdf_upload/";
+$target_dir = "C:/xampp/htdocs/PKP-IN-IOTA-Alum-Site/frontend/temp_pdf_upload/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-$title = $_POST['newsTitle'];
+$title = $_POST['titleInput'];
 $filename = $_FILES["fileToUpload"]["name"];
 
 if($imageFileType != "pdf"){

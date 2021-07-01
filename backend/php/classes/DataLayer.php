@@ -4,7 +4,6 @@ class DataLayer
 {
     private $conn;
 
-
     public function __construct(){
         $hostname = 'localhost';
         $port = 3306;
@@ -38,8 +37,8 @@ class DataLayer
         $query->execute($userData);
     }
     function insertNewsletter(array $newsInfo){
-        $query = $this->conn->prepare("insert into newsletters (newsletterTitle, newsletterLink, image) values (?,?)");
-        $query->execute($userData);
+        $query = $this->conn->prepare("insert into newsletters (newsletterTitle, newsletterLink, image) values (?,?,?)");
+        $query->execute($newsInfo);
     }
     //select
     function getUser(array $userData){
