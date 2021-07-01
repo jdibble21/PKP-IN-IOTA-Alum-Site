@@ -3,7 +3,6 @@
 class UILayer
 {
     public function displayNewsLetters($newsletters){
-
         foreach ($newsletters as $nl){
             $this->displayNewsLetterThumbnail($nl['title'],$nl['pdfLink'],$nl['image']);
         }

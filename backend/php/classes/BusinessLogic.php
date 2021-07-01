@@ -1,12 +1,14 @@
 <?php
 include "DataLayer.php";
+include "UILayer.php";
 session_start();
 class BusinessLogic
 {
     private DataLayer $dl;
-
+    private UILayer $ui;
     public function __construct(){
         $this->dl = new DataLayer();
+        $this->ui = new UILayer();
     }
 
     public function login($username,$password){
@@ -61,6 +63,7 @@ class BusinessLogic
             </div>
         ";
     }
+
 
     public function displayPastUploadedNewslettersList(){
         $newsLetters = ""; //function to grab newsletter data from db
