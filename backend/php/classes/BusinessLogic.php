@@ -43,28 +43,28 @@ class BusinessLogic
     public function displayNewsletterUploadModule(){
         return "
             <div id='formDiv' class='centered'>
-                <form id='newsUploadForm' class='form'>
+                <form id='newsUploadForm' class='form' action='/backend/php/handlers/uploadNewsletter.php' method='post' enctype='multipart/form-data'>
                     <div class=''>
                         <label for='pdfUpload'>Select Newsletter PDF file to upload</label>
-                        <input type='file' class='form-control-file' id='pdfUpload'>
-                        <label for='titleImageUpload'>Select an image to go along with newsletter title</label>
-                        <input type='file' class='form-control-file' id='titleImageUpload'>
+                        <input type='file' class='form-control-file' name='fileToUpload' id='fileToUpload'>
                     </div>
                     <div>
                         <label for='titleInput'>Newsletter Title</label>
                         <div class='col-xs-4'>
-                            <input type='text' class='form-control' placeholder='e.g. Spring 2020'> 
+                            <input type='text' name='titleInput' class='form-control' placeholder='e.g. Spring 2020'> 
                         </div>                  
                     </div>
                     <div class='m-3'>
-                        <button type='button' class='btn btn-primary'>Upload</button>
+                        <input name='submit' type='submit' value='Upload' class='btn btn-primary'/>
                     </div>
                 </form>
             </div>
         ";
     }
 
-
+    public function uploadNewsletterInfo($title,$filename){
+        $this->dl->insertNewsletter([$title,$filename,"temp_null.png"]);
+    }
     public function displayPastUploadedNewslettersList(){
         $newsLetters = ""; //function to grab newsletter data from db
     }

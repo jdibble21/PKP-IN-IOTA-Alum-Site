@@ -37,7 +37,10 @@ class DataLayer
         $query = $this->conn->prepare("insert into users (username, password, fullName, email) values (?,?,?,?)");
         $query->execute($userData);
     }
-
+    function insertNewsletter(array $newsInfo){
+        $query = $this->conn->prepare("insert into newsletters (newsletterTitle, newsletterLink, image) values (?,?)");
+        $query->execute($userData);
+    }
     //select
     function getUser(array $userData){
         $query = $this->conn->prepare("select * from users where username=?");
