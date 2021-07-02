@@ -22,7 +22,9 @@ if($uploadOk == 0){
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         echo "<p style='color: green;'>Newsletter uploaded!</p>";
         $bl->uploadNewsletterInfo($title,$filename);
+        header("Location: /Pages/Admin/adminDashboard.php");
     }else{
         echo "<p style='color: red;'>Error uploading file (server side)</p>";
     }
 }
+

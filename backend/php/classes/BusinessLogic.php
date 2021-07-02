@@ -43,7 +43,7 @@ class BusinessLogic
     public function displayNewsletterUploadModule(){
         return "
             <div id='formDiv' class='centered'>
-                <form id='newsUploadForm' class='form' action='/backend/php/handlers/uploadNewsletter.php' method='post' enctype='multipart/form-data'>
+                <form id='newsUploadForm' class='form' method='post' action='/backend/php/handlers/uploadNewsletter.php' enctype='multipart/form-data'>
                     <div class=''>
                         <label for='pdfUpload'>Select Newsletter PDF file to upload</label>
                         <input type='file' class='form-control-file' name='fileToUpload' id='fileToUpload'>
@@ -55,7 +55,7 @@ class BusinessLogic
                         </div>                  
                     </div>
                     <div class='m-3'>
-                        <input name='submit' type='submit' value='Upload' class='btn btn-primary'/>
+                        <input name='submit' type='submit' id='newsUploadSubmit' value='Upload' class='btn btn-primary'/>
                     </div>
                 </form>
             </div>
