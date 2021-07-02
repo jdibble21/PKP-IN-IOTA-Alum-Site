@@ -41,6 +41,7 @@ class BusinessLogic
         ";
     }
     public function displayNewsletterUploadModule(){
+        $current_newsletters = $this->getCurrentNewsletterList();
         return "
             <div id='formDiv' class='centered'>
                 <form id='newsUploadForm' class='form' method='post' onsubmit='return showUploadAlert();' action='/backend/php/handlers/uploadNewsletter.php' enctype='multipart/form-data'>
@@ -59,23 +60,28 @@ class BusinessLogic
                     </div>
                 </form>
             </div>
+            <br>
+            <br>
+            <h4 style='text-align: center'>Current Uploaded Newsletters</h4>
+            $current_newsletters
         ";
-    }
-    public function verifyNewsletterUpload($filename){
-        if(file_exists('/frontend/temp_pdf_upload/'.$filename.'.pdf')){
-            echo "
-            <script type='text/javascript'>
-                console.log('function hit');
-                successMessage('NewsLetter uploaded!');
-            </script>
-            ";
-        }
     }
     public function uploadNewsletterInfo($title,$filename){
         $this->dl->insertNewsletter([$title,$filename,"temp_null.png"]);
     }
-    public function displayPastUploadedNewslettersList(){
-        $newsLetters = ""; //function to grab newsletter data from db
+    public function getCurrentNewsletterList(){
+        //function must be surrounded by 'list-group' div class
+        $newsletters = $this->getNewsletters();
+        $list_items = "<div class='list-group m-4'>";
+        foreach($newsletters as $nl){
+            $title = $nl['newsletterTitle'];$pdf_link = $nl['newsletterLink'];$image = $nl['image'];
+            $list_items .= $this->ui->generateAdminNewsletterEntry($title,$pdf_link,$image);
+        }
+        $list_items .= "</div>";
+        return $list_items;
+    }
+    public function getNewsletters(){
+        return $this->dl->getNewsletters();
     }
     public function getUserByUsername($username){
         return $this->dl->getUserByUserName($username);

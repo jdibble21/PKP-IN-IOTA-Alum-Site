@@ -2,7 +2,7 @@
 
 class DataLayer
 {
-    private $conn;
+    private PDO $conn;
 
     public function __construct(){
         $hostname = 'localhost';
@@ -56,6 +56,11 @@ class DataLayer
         $query = $this->conn->prepare("select * from donations where target=?");
         $query->execute([$id]);
         return $query->fetch();
+    }
+    function getNewsletters(){
+        $query = $this->conn->prepare("select * from newsletters");
+        $query->execute();
+        return $query->fetchAll();
     }
 
     //update

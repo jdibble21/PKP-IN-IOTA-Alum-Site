@@ -15,5 +15,9 @@ class UILayer
             </div>
         ";
     }
-
+    public function generateAdminNewsletterEntry($title,$pdf,$image){
+        return "
+            <li class='list-group-item'>Title: $title<br>PDF: $pdf<br>Image: $image<button class='btn btn-warning m-2' style='justify-content: right;'>Remove</button></li>
+        ";
+    }
 }

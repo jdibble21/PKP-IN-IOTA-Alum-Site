@@ -28,4 +28,3 @@ if($uploadOk == 0){
         echo "<p style='color: red;'>Error uploading file (server side)</p>";
     }
 }
-
