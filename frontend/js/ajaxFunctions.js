@@ -57,6 +57,25 @@ function getAdminDashUpload(){
     });
 }
 
+function deleteNewsletter(newsID, title){
+    alertify.confirm("Delete Newsletter", "Are you sure you want to delete the "+title+" newsletter?",
+        function(){
+            successMessage('NewsLetter Deleted');
+            $.ajax({
+                type: "POST",
+                async: false,
+                data: {
+
+                },
+                url: "/backend/php/handlers/logoutAdmin.php",
+            });
+            window.location.href = "/Pages/Admin/adminDashboard.php";
+        },
+        function(){
+            noticeMessage('Cancelled Delete');
+        });
+}
+
 function goToAdminDash(){
     window.location.href = "/Pages/Admin/adminDashboard.php";
 }

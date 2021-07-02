@@ -69,13 +69,16 @@ class BusinessLogic
     public function uploadNewsletterInfo($title,$filename){
         $this->dl->insertNewsletter([$title,$filename,"temp_null.png"]);
     }
+    public function deleteNewsletterInfo($newsID){
+
+    }
     public function getCurrentNewsletterList(){
         //function must be surrounded by 'list-group' div class
         $newsletters = $this->getNewsletters();
         $list_items = "<div class='list-group m-4'>";
         foreach($newsletters as $nl){
-            $title = $nl['newsletterTitle'];$pdf_link = $nl['newsletterLink'];$image = $nl['image'];
-            $list_items .= $this->ui->generateAdminNewsletterEntry($title,$pdf_link,$image);
+            $title = $nl['newsletterTitle'];$pdf_link = $nl['newsletterLink'];$image = $nl['image'];$letter_ID = $nl['newsletterID'];
+            $list_items .= $this->ui->generateAdminNewsletterEntry($letter_ID,$title,$pdf_link,$image);
         }
         $list_items .= "</div>";
         return $list_items;
@@ -86,6 +89,7 @@ class BusinessLogic
     public function getUserByUsername($username){
         return $this->dl->getUserByUserName($username);
     }
+
     public function recordDonation($alumID,$amount,$date){
         $this->dl->insertDonation([$alumID,$amount,$date]);
     }
