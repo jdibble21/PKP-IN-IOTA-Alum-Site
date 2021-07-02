@@ -9,6 +9,9 @@ function showLoginForm(){
     }
 }
 
+function showUploadAlert(){
+    successMessage('Newsletter Uploaded!');
+}
 function errorMessage(message){
     alertify.error(message);
 }

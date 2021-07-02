@@ -43,7 +43,7 @@ class BusinessLogic
     public function displayNewsletterUploadModule(){
         return "
             <div id='formDiv' class='centered'>
-                <form id='newsUploadForm' class='form' method='post' action='/backend/php/handlers/uploadNewsletter.php' enctype='multipart/form-data'>
+                <form id='newsUploadForm' class='form' method='post' onsubmit='return showUploadAlert();' action='/backend/php/handlers/uploadNewsletter.php' enctype='multipart/form-data'>
                     <div class=''>
                         <label for='pdfUpload'>Select Newsletter PDF file to upload</label>
                         <input type='file' class='form-control-file' name='fileToUpload' id='fileToUpload'>
@@ -61,7 +61,16 @@ class BusinessLogic
             </div>
         ";
     }
-
+    public function verifyNewsletterUpload($filename){
+        if(file_exists('/frontend/temp_pdf_upload/'.$filename.'.pdf')){
+            echo "
+            <script type='text/javascript'>
+                console.log('function hit');
+                successMessage('NewsLetter uploaded!');
+            </script>
+            ";
+        }
+    }
     public function uploadNewsletterInfo($title,$filename){
         $this->dl->insertNewsletter([$title,$filename,"temp_null.png"]);
     }
