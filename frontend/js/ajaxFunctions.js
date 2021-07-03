@@ -43,7 +43,7 @@ function getAdminDashHome(){
         url:"/backend/php/handlers/echoResponse/getDashHome.php",
         cache:false,
         success:function(data){
-            document.getElementById("rendContainer").innerHTML = "<h3>Dashboard Home</h3>" + data;
+            document.getElementById("rendContainer").innerHTML = "<h3 style='text-align: center; color: #FFFFFF;'>Dashboard Home</h3>" + data;
         }
     });
 }
@@ -52,7 +52,7 @@ function getAdminDashUpload(){
         url:"/backend/php/handlers/echoResponse/getDashUpload.php",
         cache:false,
         success:function(data){
-            document.getElementById("rendContainer").innerHTML = "<h3>Newsletter Upload</h3>" + data;
+            document.getElementById("rendContainer").innerHTML = "<h3 style='text-align: center; color: #FFFFFF'>Newsletter Upload</h3>" + data;
         }
     });
 }

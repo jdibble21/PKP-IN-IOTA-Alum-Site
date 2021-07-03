@@ -62,7 +62,7 @@ class BusinessLogic
             </div>
             <br>
             <br>
-            <h4 style='text-align: center'>Current Uploaded Newsletters</h4>
+            <h4 style='text-align: center;color:#FFFFFF'>Uploaded Newsletters</h4>
             $current_newsletters
         ";
     }
@@ -75,6 +75,9 @@ class BusinessLogic
     public function getCurrentNewsletterList(){
         //function must be surrounded by 'list-group' div class
         $newsletters = $this->getNewsletters();
+        if($newsletters == null){
+            return "<p class='m-5' style='text-align: center;color:#FFFFFF;'>No Newsletters Uploaded Currently</p>";
+        }
         $list_items = "<div class='list-group m-4'>";
         foreach($newsletters as $nl){
             $title = $nl['newsletterTitle'];$pdf_link = $nl['newsletterLink'];$image = $nl['image'];$letter_ID = $nl['newsletterID'];
