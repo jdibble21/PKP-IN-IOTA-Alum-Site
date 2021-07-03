@@ -5,10 +5,8 @@ function showLoginForm(){
         document.getElementById("loginForm").style.display = "inline";
     }else{
         document.getElementById("loginForm").style.display = "none";
-
     }
 }
-
 function showUploadAlert(){
     successMessage('Newsletter Uploaded!');
 }
