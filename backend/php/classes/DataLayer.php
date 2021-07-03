@@ -62,10 +62,18 @@ class DataLayer
         $query->execute();
         return $query->fetchAll();
     }
+    function getNewsletterFilename($id){
+        $query = $this->conn->prepare("select * from newsletters where newsletterID=?");
+        $query->execute([$id]);
+        return $query->fetch();
+    }
 
     //update
 
     //delete
-
+    function deleteNewsletter($id){
+        $query = $this->conn->prepare("delete from newsletters where newsletterID=?");
+        $query->execute([$id]);
+    }
 
 }

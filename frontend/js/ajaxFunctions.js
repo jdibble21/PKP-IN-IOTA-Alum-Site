@@ -1,4 +1,4 @@
-//All client-server/ server-client functions here
+//All client-server / server-client functions here
 
 function loginUser(username,password){
     $.ajax({
@@ -65,9 +65,9 @@ function deleteNewsletter(newsID, title){
                 type: "POST",
                 async: false,
                 data: {
-
+                    newsID: newsID,
                 },
-                url: "/backend/php/handlers/logoutAdmin.php",
+                url: "/backend/php/handlers/deleteNewsletter.php",
             });
             window.location.href = "/Pages/Admin/adminDashboard.php";
         },

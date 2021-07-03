@@ -70,7 +70,7 @@ class BusinessLogic
         $this->dl->insertNewsletter([$title,$filename,"temp_null.png"]);
     }
     public function deleteNewsletterInfo($newsID){
-
+        $this->dl->deleteNewsletter($newsID);
     }
     public function getCurrentNewsletterList(){
         //function must be surrounded by 'list-group' div class
@@ -101,7 +101,9 @@ class BusinessLogic
         $this->dl->insertAdminUser([$username,$hash_password,$fullName,$email]);
     }
 
-
+    public function getNewsFilenameByID($delete_id){
+        return $this->dl->getNewsletterFilename($delete_id)['newsletterLink'];
+    }
 
 
 }
