@@ -72,8 +72,10 @@ class BusinessLogic
     public function deleteNewsletterInfo($newsID){
         $this->dl->deleteNewsletter($newsID);
     }
+    public function getExportModule(){
+        return $this->ui->displayExportDataModule();
+    }
     public function getCurrentNewsletterList(){
-        //function must be surrounded by 'list-group' div class
         $newsletters = $this->getNewsletters();
         if($newsletters == null){
             return "<p class='m-5' style='text-align: center;color:#FFFFFF;'>No Newsletters Uploaded Currently</p>";

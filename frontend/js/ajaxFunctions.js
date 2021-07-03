@@ -56,7 +56,15 @@ function getAdminDashUpload(){
         }
     });
 }
-
+function getExportDataModule(){
+    $.ajax({
+        url:"/backend/php/handlers/echoResponse/getDashExport.php",
+        cache:false,
+        success:function(data){
+            document.getElementById("rendContainer").innerHTML = "<h3 style='text-align: center; color: #FFFFFF'>Export Records</h3>" + data;
+        }
+    });
+}
 function deleteNewsletter(newsID, title){
     alertify.confirm("Delete Newsletter", "Are you sure you want to delete the "+title+" newsletter?",
         function(){

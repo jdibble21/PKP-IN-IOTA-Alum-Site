@@ -37,6 +37,7 @@ include '../navbar.php';
             });
             $("#expRecords").on('click',function (){
                 $("#rendContainer").replaceWith("<div id=\"rendContainer\" class=\"container\">export records</div>");
+                getExportDataModule();
             });
             $("#uAccounts").on('click',function (){
                 $("#rendContainer").replaceWith("<div id=\"rendContainer\" class=\"container\">user accounts</div>");
