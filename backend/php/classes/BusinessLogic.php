@@ -109,6 +109,4 @@ class BusinessLogic
     public function getNewsFilenameByID($delete_id){
         return $this->dl->getNewsletterFilename($delete_id)['newsletterLink'];
     }
-
-
 }

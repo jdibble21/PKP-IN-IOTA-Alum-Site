@@ -59,9 +59,7 @@ include '../navbar.php';
                     </div>
                 </div>
                 <div class="col center-block"" id="dashContent">
-                    <div id="rendContainer" class="container">
-
-                    </div>
+                    <div id="rendContainer" class="container"></div>
                 </div>
             </div>
         </div>
