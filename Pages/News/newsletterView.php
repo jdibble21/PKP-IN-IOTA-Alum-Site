@@ -1,18 +1,15 @@
 <?php
 include '../header.php';
-session_start();
+include '../../backend/php/classes/BusinessLogic.php';
 include '../navbar.php';
+
+$bl = new BusinessLogic();
 ?>
-<h1>News page</h1>
+<h1 style="text-align: center;">Indiana Iota Alumni Newsletters</h1>
 <br>
-<div class="container">
-<div class="card w-75 h-75 bg-dark text-white">
-    <img class="img-thumbnail" src="/frontend/assets/img/news_cover.JPG" alt="Card image">
-    <div class="card-img-overlay">
-        <h5 class="card-title" style="font-size: 50px;">Spring 2020</h5>
-    </div>
-</div>
-</div>
+<?php
+    $bl->displayNewsletterPage();
+?>
     <br><br><br>
     <br><br><br>
 <?php

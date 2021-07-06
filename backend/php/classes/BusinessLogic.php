@@ -67,7 +67,7 @@ class BusinessLogic
         ";
     }
     public function uploadNewsletterInfo($title,$filename){
-        $this->dl->insertNewsletter([$title,$filename,"temp_null.png"]);
+        $this->dl->insertNewsletter([$title,$filename,"news_cover.JPG"]);
     }
     public function deleteNewsletterInfo($newsID){
         $this->dl->deleteNewsletter($newsID);
@@ -90,6 +90,9 @@ class BusinessLogic
     }
     public function getNewsletters(){
         return $this->dl->getNewsletters();
+    }
+    public function displayNewsletterPage(){
+        $this->ui->generateNewsletterContent($this->dl->getNewsletters());
     }
     public function getUserByUsername($username){
         return $this->dl->getUserByUserName($username);
