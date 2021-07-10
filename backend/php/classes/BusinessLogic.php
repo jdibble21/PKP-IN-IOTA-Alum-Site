@@ -108,6 +108,9 @@ class BusinessLogic
         $hash_password = password_hash($password, PASSWORD_DEFAULT);
         $this->dl->insertAdminUser([$username,$hash_password,$fullName,$email]);
     }
+    public function displayUserAccountModule(){
+        return $this->ui->displayAdminUserAddModule();
+    }
 
     public function getNewsFilenameByID($delete_id){
         return $this->dl->getNewsletterFilename($delete_id)['newsletterLink'];

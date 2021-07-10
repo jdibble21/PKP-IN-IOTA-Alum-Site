@@ -60,4 +60,22 @@ class UILayer
     <br>
         ";
     }
+
+    public function displayAdminUserAddModule(){
+        return "
+            <div class='container' style='color: #FFFFFF;'>
+                <h4>Add a new User</h4>
+                <form>
+                    <div class='form-group'>
+                        <label for='userInput'>Username</label>
+                        <input type='text' class='form-control' id='userInput' placeholder=''>
+                        <label for='passwordInput'>Password</label>
+                        <input type='text' class='form-control'>
+                    </div>
+                    <input type='button' class='btn btn-primary' value='Create New User'>
+                </form>
+                <h4>Current Users:</h4>
+            </div>
+        ";
+    }
 }

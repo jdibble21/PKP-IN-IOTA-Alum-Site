@@ -36,11 +36,12 @@ include '../navbar.php';
                 $("#rendContainer").replaceWith("<div id=\"rendContainer\" class=\"container\">donation log</div>");
             });
             $("#expRecords").on('click',function (){
-                $("#rendContainer").replaceWith("<div id=\"rendContainer\" class=\"container\">export records</div>");
+                $("#rendContainer").replaceWith("<div id=\"rendContainer\" class=\"container\"></div>");
                 getExportDataModule();
             });
             $("#uAccounts").on('click',function (){
-                $("#rendContainer").replaceWith("<div id=\"rendContainer\" class=\"container\">user accounts</div>");
+                $("#rendContainer").replaceWith("<div id=\"rendContainer\" class=\"container\"></div>");
+                getUserAccountModule();
             });
         });
     </script>
