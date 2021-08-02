@@ -5,7 +5,7 @@ include '../navbar.php';
 
 $bl = new BusinessLogic();
 ?>
-<h1 style="text-align: center;">Indiana Iota Alumni Newsletters</h1>
+<h2 class="mt-4" style="text-align: center;">Indiana Iota Alumni Newsletters</h2>
 <br>
 <?php
     $bl->displayNewsletterPage();
