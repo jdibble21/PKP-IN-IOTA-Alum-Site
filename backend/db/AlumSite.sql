@@ -34,6 +34,6 @@ CREATE TABLE `newsletters` (
   `newsletterTitle` varchar(255) NOT NULL unique,
   `newsletterLink` varchar(255) NOT NULL,
   `image` varchar(255) NOT NULL
-)
+);
 
 insert into users(username, password, fullName, email) values ('admin','$2y$10$zHil2RebNZbyKgiH2Zxj.OVHiloKgyu/r177TIGBOSvWvb7qHo/b.','Super Admin','jakeers98@icloud.com');

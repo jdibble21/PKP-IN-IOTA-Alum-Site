@@ -1,7 +1,12 @@
 /*
 Custom styles to override bootstrap go here
  */
-
+body {
+    background-color: #e3e3e3;!important;
+}
+nav {
+    background-color: #FFFFFF;!important;
+}
 #linkOverride{
     background-color: #C41E3A;
     color: #f8f9fa;

@@ -2,7 +2,7 @@
 
 class DataLayer
 {
-    private PDO $conn;
+    private $conn;
 
     public function __construct(){
         $hostname = 'localhost';

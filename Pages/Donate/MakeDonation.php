@@ -4,11 +4,13 @@ session_start();
 include '../navbar.php';
 ?>
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col">
-            <h4 style="text-align: center;">Donate to your favorite chapter</h4>
-
-            <script src="https://donorbox.org/widget.js" paypalExpress="false"></script><iframe src="https://donorbox.org/embed/test-donate-6" name="donorbox" allowpaymentrequest="" seamless="seamless" frameborder="0" scrolling="no" height="900px" width="100%" style="max-width: 500px; min-width: 250px; max-height:none!important"></iframe>
+    <div class="row">
+        <div class="col mx-auto">
+            <h3 class="mt-4 mx-auto" style="text-align: center">Donate to your favorite chapter</h3>
+            <div class="container m-4">
+                <p style="text-align: center"><strong>Note:</strong> Our official chapter donation feature is still being worked on! In the meantime, here is our Venmo if you wish to contribute!</p>
+                <img class="mx-auto d-block" src="/frontend/assets/img/venmoTest.JPG" alt="venmoQRCode">
+            </div>
         </div>
     </div>
 </div>

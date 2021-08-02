@@ -25,6 +25,6 @@ if($uploadOk == 0){
         sleep(1);
         header("Location: /Pages/Admin/adminDashboard.php");
     }else{
-        echo "<p style='color: red;'>Error uploading file (server side)</p>";
+        echo "<p style='color: red;'>Error uploading file (server side: Time to call Dibble and have him fix it)</p>";
     }
 }

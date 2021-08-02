@@ -4,8 +4,8 @@ include "UILayer.php";
 session_start();
 class BusinessLogic
 {
-    private DataLayer $dl;
-    private UILayer $ui;
+    private  $dl;
+    private  $ui;
     public function __construct(){
         $this->dl = new DataLayer();
         $this->ui = new UILayer();
