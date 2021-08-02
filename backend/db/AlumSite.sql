@@ -30,7 +30,7 @@ CREATE TABLE `users` (
 );
 DROP TABLE IF EXISTS `newsletters`;
 CREATE TABLE `newsletters` (
-  `newsletterID` int(11) NOT NULL primary key,
+  `newsletterID` int(11) NOT NULL auto_increment primary key,
   `newsletterTitle` varchar(255) NOT NULL unique,
   `newsletterLink` varchar(255) NOT NULL,
   `image` varchar(255) NOT NULL

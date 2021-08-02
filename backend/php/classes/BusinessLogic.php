@@ -1,7 +1,7 @@
 <?php
 include "DataLayer.php";
 include "UILayer.php";
-session_start();
+
 class BusinessLogic
 {
     private  $dl;
@@ -93,6 +93,15 @@ class BusinessLogic
     }
     public function displayNewsletterPage(){
         $this->ui->generateNewsletterContent($this->dl->getNewsletters());
+    }
+    public function displayHomePageNewsCards(){
+        $newsletters = $this->dl->getNewsletters();
+        $newsArray = array();
+        foreach ($newsletters as $nl){
+            $a = [$nl['newsletterTitle'],$nl['newsletterLink'],$nl['image']];
+            array_push($newsArray,$a);
+        }
+        $this->ui->displayLatestUpdatesCards($newsArray);
     }
     public function getUserByUsername($username){
         return $this->dl->getUserByUserName($username);

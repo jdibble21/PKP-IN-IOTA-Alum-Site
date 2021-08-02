@@ -35,7 +35,44 @@ class UILayer
         </div>
         ";
     }
+    public function displayLatestUpdatesCards(array $updates){
+        //2D array, each subarray title, pdf link then image link
+        $cardArray = array();
+        for($i=0; $i< count($updates);$i++){
+            $title = $updates[$i][0];
+            $pdf_link = "/frontend/temp_pdf_upload/". $updates[$i][1];
+            $image_link = "/frontend/temp_img_upload/".$updates[$i][2];
+            array_push($cardArray," <div class='col-lg-4 col-sm-6 mb-4'>
+                    <div class='card h-100' id='newsOverride'>
+                        <a target='_blank' href=$pdf_link><img class='card-img-top' src=$image_link alt='...' /></a>
+                        <div class='card-body'>
+                            <h4 class='card-title' style='text-align: center'><a href=$pdf_link>$title</a></h4>
+                        </div>
+                    </div>
+                </div>");
+        }
+        // If we have less than 3 newsletters, fill in cards with blank data
+        if(count($cardArray) < 3){
+            $cardsToFill = 3 - count($cardArray);
+            for($i = 0; $i < $cardsToFill; $i++){
+                array_push($cardArray," <div class='col-lg-4 col-sm-6 mb-4'>
+                    <div class='card h-100' id='newsOverride'>
+                        <a class='mx-auto' href='#!'><img class='card-img-top' style='max-width:100%; text-align: center;' src='/frontend/assets/img/homeCardDefault.JPG' alt='...' /></a>
+                        <div class='card-body'>
+                            <h4 class='card-title' style='text-align: center'><a href='#!'>Coming Soon</a></h4>
+                        </div>
+                    </div>
+                </div>");
+            }
+        }
+        $this->showUpdateCards($cardArray);
+    }
 
+    private function showUpdateCards($cards){
+        for($i=0; $i < count($cards); $i++){
+            echo $cards[$i];
+        }
+    }
     public function generateNewsletterContent($newsletters){
         echo "<div class=\"container\" style=\"justify-content: center;\">";
         foreach ($newsletters as $nl){
