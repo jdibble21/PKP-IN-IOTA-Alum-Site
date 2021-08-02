@@ -11,6 +11,14 @@ nav {
     background-color: #C41E3A;
     color: #f8f9fa;
 }
+.newsCard{
+    color: #FFFFFF;!important;
+    transition: 0.2s;
+}
+.newsCard:hover{
+    color: #355E3B;
+
+}
 #cardOverride{
     background-color: #355E3B;
     color: #f8f9fa;

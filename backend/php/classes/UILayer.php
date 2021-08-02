@@ -74,7 +74,7 @@ class UILayer
         }
     }
     public function generateNewsletterContent($newsletters){
-        echo "<div class=\"container\" style=\"justify-content: center;\">";
+        echo "<div class=\"container\" style=\"text-emphasis: ;: center;\">";
         foreach ($newsletters as $nl){
                 $pdf_link = "/frontend/temp_pdf_upload/".$nl['newsletterLink'];
                 $image_link = "/frontend/temp_img_upload/".$nl['image'];
@@ -85,8 +85,8 @@ class UILayer
     public function displayNewsletterCard($title,$pdfLink,$imgLink){
         echo "
     <a href='$pdfLink' target='_blank'>
-        <div class='row'>
-            <div class='card w-75 h-75 bg-dark text-white'>
+        <div class='row' style='width: 100%;'>
+            <div class='card w-75 h-75 bg-dark newsCard' style='margin: 0 auto'>
                 <img class='img-thumbnail' src='$imgLink' alt='newsletter thumbnail'>
                 <div class='card-img-overlay'>
                     <h5 class='card-title' style='font-size: 50px;'>$title</h5>
