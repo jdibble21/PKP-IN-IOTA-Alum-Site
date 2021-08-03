@@ -31,7 +31,7 @@ class UILayer
                 <input type='radio' id='customRadio2' name='customRadio' class='custom-control-input'>
                 <label class='custom-control-label' for='customRadio2'>Export Financial Data (Donations and Dates)</label>
             </div>
-            <button class='btn btn-primary m-2'>Download</button>
+            <button class='btn btn-primary m-2' onclick='notUsedMessage();'>Download</button>
         </div>
         ";
     }

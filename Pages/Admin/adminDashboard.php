@@ -33,7 +33,7 @@ include '../navbar.php';
                 getAdminDashUpload();
             });
             $("#donLog").on('click',function (){
-                $("#rendContainer").replaceWith("<div id=\"rendContainer\" class=\"container\">donation log</div>");
+                $("#rendContainer").replaceWith("<div id=\"rendContainer\" class=\"container\"><h3 class='mt-3' style='text-align: center; color: #FFFFFF'>Donation Log (WIP)</h3></div>");
             });
             $("#expRecords").on('click',function (){
                 $("#rendContainer").replaceWith("<div id=\"rendContainer\" class=\"container\"></div>");
@@ -55,7 +55,7 @@ include '../navbar.php';
                             <a id="newsUpload" class="list-group-item list-group-item-action list-group-item-light p-3">Newsletter Upload</a>
                             <a id="donLog" class="list-group-item list-group-item-action list-group-item-light p-3" >Donation Log</a>
                             <a id="expRecords" class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Export Records</a>
-                            <a id="uAccounts" class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">User Accounts</a>
+
                         </div>
                     </div>
                 </div>
@@ -67,4 +67,6 @@ include '../navbar.php';
 
 <?php
 include '../footer.php';
+// For future implementation
+//<a id="uAccounts" class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">User Accounts</a>
 ?>

@@ -21,3 +21,7 @@ function successMessage(message){
 function noticeMessage(message){
     alertify.warning(message);
 }
+
+function notUsedMessage(){
+    noticeMessage('Button does nothing buddy, its a WIP ');
+}

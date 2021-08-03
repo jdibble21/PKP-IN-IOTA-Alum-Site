@@ -61,7 +61,7 @@ function getExportDataModule(){
         url:"/backend/php/handlers/echoResponse/getDashExport.php",
         cache:false,
         success:function(data){
-            document.getElementById("rendContainer").innerHTML = "<h3 class='mt-3' style='text-align: center; color: #FFFFFF'>Export Records</h3>" + data;
+            document.getElementById("rendContainer").innerHTML = "<h3 class='mt-3' style='text-align: center; color: #FFFFFF'>Export Records (WIP)</h3>" + data;
         }
     });
 }
