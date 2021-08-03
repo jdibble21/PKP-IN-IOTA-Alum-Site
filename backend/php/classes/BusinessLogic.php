@@ -44,17 +44,17 @@ class BusinessLogic
         $current_newsletters = $this->getCurrentNewsletterList();
         return "
             <div class='container'>
-                <strong><p>Upload Instructions</p><p>1. Upload file must be in PDF format<br>2. Choose a image cover for newsletter. Pick an appropriate picture of brothers from the semester of the newsletter (this is what people will see before clicking on newsletter)<br> 3. Enter a title (Keep a consistent title format)<br>4. Click the upload button (Don't screw this up)</p></strong>
+                <strong><p>Upload Instructions</p><p>1. Choose Newsletter file. File must be in PDF format<br>2. Choose a image cover for newsletter. Pick an appropriate picture of brothers from the semester of the newsletter (this is what people will see before clicking on newsletter)<br> 3. Enter a title (Keep a consistent title format)<br>4. Click the upload button (Don't screw this up)</p></strong>
             </div>
             <div id='formDiv' class='centered'>
                 <form id='newsUploadForm' class='form' method='post' onsubmit='return showUploadAlert();' action='/backend/php/handlers/uploadNewsletter.php' enctype='multipart/form-data'>
                     <div class=''>
                         <label for='pdfUpload'>Select Newsletter PDF file to upload</label>
-                        <input type='file' class='form-control-file' name='fileToUpload' id='fileToUpload'>
+                        <input type='file' class='form-control-file' name='pdfToUpload' id='pdfToUpload'>
                     </div>
                     <div class=''>
-                        <label for='pdfUpload'>Select Image file to upload</label>
-                        <input type='file' class='form-control-file' name='fileToUpload' id='fileToUpload'>
+                        <label for='imageUpload'>Select Image file to upload</label>
+                        <input type='file' class='form-control-file' name='imgToUpload' id='imgToUpload'>
                     </div>
                     <div>
                         <label for='titleInput'>Newsletter Title</label>
@@ -73,8 +73,8 @@ class BusinessLogic
             $current_newsletters
         ";
     }
-    public function uploadNewsletterInfo($title,$filename){
-        $this->dl->insertNewsletter([$title,$filename,"news_cover.JPG"]);
+    public function uploadNewsletterInfo($title,$filename,$image){
+        $this->dl->insertNewsletter([$title,$filename,$image]);
     }
     public function deleteNewsletterInfo($newsID){
         $this->dl->deleteNewsletter($newsID);
@@ -130,5 +130,8 @@ class BusinessLogic
 
     public function getNewsFilenameByID($delete_id){
         return $this->dl->getNewsletterFilename($delete_id)['newsletterLink'];
+    }
+    public function getImageFilenameByID($delete_id){
+        return $this->dl->getNewsletterFilename($delete_id)['image'];
     }
 }

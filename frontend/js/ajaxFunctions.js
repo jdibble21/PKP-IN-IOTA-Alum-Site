@@ -43,7 +43,7 @@ function getAdminDashHome(){
         url:"/backend/php/handlers/echoResponse/getDashHome.php",
         cache:false,
         success:function(data){
-            document.getElementById("rendContainer").innerHTML = "<h3 style='text-align: center; color: #FFFFFF;'>Dashboard Home</h3>" + data;
+            document.getElementById("rendContainer").innerHTML = "<h3 class='mt-3' style='text-align: center; color: #FFFFFF;'>Dashboard Home</h3>" + data;
         }
     });
 }
@@ -52,7 +52,7 @@ function getAdminDashUpload(){
         url:"/backend/php/handlers/echoResponse/getDashUpload.php",
         cache:false,
         success:function(data){
-            document.getElementById("rendContainer").innerHTML = "<h3 style='text-align: center; color: #FFFFFF'>Newsletter Upload</h3>" + data;
+            document.getElementById("rendContainer").innerHTML = "<h3 class='mt-3' style='text-align: center; color: #FFFFFF'>Newsletter Upload</h3>" + data;
         }
     });
 }
@@ -61,7 +61,7 @@ function getExportDataModule(){
         url:"/backend/php/handlers/echoResponse/getDashExport.php",
         cache:false,
         success:function(data){
-            document.getElementById("rendContainer").innerHTML = "<h3 style='text-align: center; color: #FFFFFF'>Export Records</h3>" + data;
+            document.getElementById("rendContainer").innerHTML = "<h3 class='mt-3' style='text-align: center; color: #FFFFFF'>Export Records</h3>" + data;
         }
     });
 }
@@ -70,7 +70,7 @@ function getUserAccountModule(){
         url:"/backend/php/handlers/echoResponse/getUserAccountResponse.php",
         cache:false,
         success:function(data){
-            document.getElementById("rendContainer").innerHTML = "<h3 style='text-align: center; color: #FFFFFF'>User Accounts</h3>" + data;
+            document.getElementById("rendContainer").innerHTML = "<h3 class='mt-3' style='text-align: center; color: #FFFFFF'>User Accounts</h3>" + data;
         }
     });
 }
