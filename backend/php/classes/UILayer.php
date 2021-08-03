@@ -44,9 +44,9 @@ class UILayer
             $image_link = "/frontend/temp_img_upload/".$updates[$i][2];
             array_push($cardArray," <div class='col-lg-4 col-sm-6 mb-4'>
                     <div class='card h-100' id='newsOverride'>
-                        <a target='_blank' href=$pdf_link><img class='card-img-top' src=$image_link alt='...' /></a>
+                        <a class='mx-auto' target='_blank' href=$pdf_link><img class='card-img-top' style='max-width:100%; text-align: center;' src=$image_link alt='...' /></a>
                         <div class='card-body'>
-                            <h4 class='card-title' style='text-align: center'><a href=$pdf_link>$title</a></h4>
+                            <h4 class='card-title' style='text-align: center'><a target='_blank' href=$pdf_link>$title</a></h4>
                         </div>
                     </div>
                 </div>");

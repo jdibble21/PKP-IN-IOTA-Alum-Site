@@ -7,6 +7,10 @@ body {
 nav {
     background-color: #FFFFFF;!important;
 }
+#noNewsHeader{
+    background-color: #355E3B;!important;
+    color: #FFFFFF;
+}
 #linkOverride{
     background-color: #C41E3A;
     color: #f8f9fa;
@@ -17,7 +21,6 @@ nav {
 }
 .newsCard:hover{
     color: #355E3B;
-
 }
 #cardOverride{
     background-color: #355E3B;

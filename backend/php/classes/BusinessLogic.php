@@ -44,7 +44,7 @@ class BusinessLogic
         $current_newsletters = $this->getCurrentNewsletterList();
         return "
             <div class='container'>
-                <strong><p>Upload Instructions</p><p>1. Choose Newsletter file. File must be in PDF format<br>2. Choose a image cover for newsletter. Pick an appropriate picture of brothers from the semester of the newsletter (this is what people will see before clicking on newsletter)<br> 3. Enter a title (Keep a consistent title format)<br>4. Click the upload button (Don't screw this up)</p></strong>
+                <strong><p>Upload Instructions</p><p>1. Choose Newsletter file. File must be in PDF format<br>2. Choose a image cover for newsletter (Will be resized to 700x400). Pick an appropriate picture of brothers from the semester of the newsletter (this is what people will see before clicking on newsletter)<br> 3. Enter a title (Keep a consistent title format)<br>4. Click the upload button (Don't screw this up)</p></strong>
             </div>
             <div id='formDiv' class='centered'>
                 <form id='newsUploadForm' class='form' method='post' onsubmit='return showUploadAlert();' action='/backend/php/handlers/uploadNewsletter.php' enctype='multipart/form-data'>
@@ -99,7 +99,12 @@ class BusinessLogic
         return $this->dl->getNewsletters();
     }
     public function displayNewsletterPage(){
-        $this->ui->generateNewsletterContent($this->dl->getNewsletters());
+        $newsletters = $this->dl->getNewsletters();
+        if($newsletters == null){
+            echo "<br><br><div id='noNewsHeader' class='container mx-auto p-5'><h3  style='text-align: center'>It looks like no newsletters have been uploaded yet!</h3></div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
+        }else{
+            $this->ui->generateNewsletterContent($newsletters);
+        }
     }
     public function displayHomePageNewsCards(){
         $newsletters = $this->dl->getNewsletters();
